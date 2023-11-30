@@ -1,16 +1,18 @@
 # tieats
 
-A new Flutter project.
+Hi Folks  🚀,
 
-## Getting Started
+Tieats is Food Online Delivery, for now i just complete: 
 
-This project is a starting point for a Flutter application.
+1. Splash Screen Page
+2. Onboarding Page
+3. Register Page
+4. Sign In Page
 
-A few resources to get you started if this is your first Flutter project:
+## Preview
+https://github.com/tdavidk/tieats-app/assets/49645102/1d216f20-0a3d-4ea4-a36b-ccc78e3a383e
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The design is from [shaynakit.com](http://shaynakit.com) by Build With Angga
+
+I will update to the home page and beyond, integrating it using BLOC for state management that I use and Firebase for the database.
