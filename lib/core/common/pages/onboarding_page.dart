@@ -56,24 +56,21 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 380.h,
+            SizedBox(height: context.height * 0.065),
+            Expanded(
               child: PageView.builder(
                 controller: _pageController,
                 itemCount: onboardingList.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 24.0, vertical: 40.h),
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 37.5),
-                          child: SvgPicture.asset(
-                            onboardingList[index].media,
-                          ),
+                        SvgPicture.asset(
+                          onboardingList[index].media,
+                          width: context.width * 0.7,
                         ),
                         SizedBox(height: 20.h),
                         Text(
@@ -100,6 +97,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
             ),
             Container(
+              height: 55.h,
               margin: const EdgeInsets.only(bottom: 40),
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
