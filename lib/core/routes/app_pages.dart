@@ -24,5 +24,9 @@ class AppPages {
       name: _Paths.OTP,
       page: () => const OtpPage(),
     ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => const HomePage(),
+    ),
   ];
 }

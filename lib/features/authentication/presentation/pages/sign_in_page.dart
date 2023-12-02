@@ -96,7 +96,7 @@ class _SignInPageState extends State<SignInPage> {
                   Text(
                     'Don’t have an account?',
                     style: TypographyStyle.regular.copyWith(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       color: Colours.greyDarker,
                     ),
                   ),
@@ -108,7 +108,7 @@ class _SignInPageState extends State<SignInPage> {
                     child: Text(
                       'Sign up',
                       style: TypographyStyle.regular.copyWith(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: Colours.orange,
                       ),
                     ),

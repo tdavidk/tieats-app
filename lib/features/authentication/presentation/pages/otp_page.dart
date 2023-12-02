@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/route_manager.dart';
 import 'package:tieats/core/common/widgets/widgets.dart';
 import 'package:tieats/core/res/colours.dart';
 import 'package:tieats/core/res/typography_style.dart';
+import 'package:tieats/core/routes/routes.dart';
 
 class OtpPage extends StatefulWidget {
   const OtpPage({super.key});
@@ -15,18 +18,16 @@ class _OtpPageState extends State<OtpPage> {
   String myPin = '123456';
   String? currentPin;
   bool isFilled = false;
-  final int _seconds = 10;
-  late final ValueNotifier<int> _timeNotifier;
+  final ValueNotifier<int> _timeNotifier = ValueNotifier(10);
 
   @override
   void initState() {
-    _timeNotifier = ValueNotifier<int>(_seconds);
     _startCountdown();
     super.initState();
   }
 
   void _restartCountdown() {
-    _timeNotifier.value = _seconds;
+    _timeNotifier.value = 10;
     _startCountdown();
   }
 
@@ -37,12 +38,6 @@ class _OtpPageState extends State<OtpPage> {
         _startCountdown();
       }
     });
-  }
-
-  @override
-  void dispose() {
-    _timeNotifier.dispose();
-    super.dispose();
   }
 
   @override
@@ -59,7 +54,7 @@ class _OtpPageState extends State<OtpPage> {
               "Enter the OTP code we sent via SMS to your registered phone number +62 81273817293",
               textAlign: TextAlign.left,
               style: TypographyStyle.semiBold.copyWith(
-                fontSize: 14,
+                fontSize: 14.sp,
                 color: Colours.greyDarker,
               ),
             ),
@@ -85,7 +80,7 @@ class _OtpPageState extends State<OtpPage> {
                       child: Text(
                         'Resend Code ($remainingSeconds)',
                         style: TypographyStyle.bold.copyWith(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           color: Colours.greyDarker,
                         ),
                       ),
@@ -103,7 +98,7 @@ class _OtpPageState extends State<OtpPage> {
                         child: Text(
                           'Resend Code',
                           style: TypographyStyle.bold.copyWith(
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             color: Colours.blackLight,
                           ),
                         ),
@@ -126,6 +121,8 @@ class _OtpPageState extends State<OtpPage> {
                       title: 'Incorrect OTP code',
                       message: 'Plase enter the OTP code again',
                     );
+                  } else {
+                    Get.offAllNamed(Routes.HOME);
                   }
                 }
               : null,

@@ -106,7 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Text(
                     'Already have an account?',
                     style: TypographyStyle.regular.copyWith(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       color: Colours.greyDarker,
                     ),
                   ),
@@ -118,7 +118,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: Text(
                       'Sign in',
                       style: TypographyStyle.regular.copyWith(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: Colours.orange,
                       ),
                     ),

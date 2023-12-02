@@ -54,7 +54,7 @@ class CustomPin extends StatelessWidget {
         height: 48.w,
         width: 48.w,
         textStyle: TypographyStyle.bold.copyWith(
-          fontSize: 20,
+          fontSize: 20.sp,
           color: Colours.orange,
         ),
         decoration: BoxDecoration(
